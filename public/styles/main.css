@@ -1,0 +1,68 @@
+.nav-bar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nav-bar-list>li {
+    display: inline;
+    float: left;
+}
+
+.nav-bar-list a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+.nav-bar-list a:hover {
+background-color: #111;
+}
+
+#logo:hover {
+background-color: #333;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #e5e5e5;
+    font-size: 16px;
+    resize: both;
+  }
+
+
+input {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #e5e5e5;
+    font-size: 22px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.synopsis-preview {
+    color: grey; 
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    line-height: 16px; 
+  }
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+}

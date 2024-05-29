@@ -1,0 +1,29 @@
+
+<%- include("partials/header.ejs") %>
+
+<h1>Welcome to your Library <%= name  %></h1>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')">Show all</button>
+  <button class="btn" onclick="filterSelection('read')">Read</button>
+  <button class="btn" onclick="filterSelection('non-read')">Not read</button>
+  <button class="btn" onclick="filterSelection('owned')">Owned</button>
+  <button class="btn" onclick="filterSelection('not-owned')">Not owned</button>
+</div>
+
+  <% if (locals.ownedBooks) { %>
+    <ul>
+      <% ownedBooks.forEach((book)=> {  %>
+        <li class="filterDiv <%= book.owned %> <%= book.read %>">
+          <h2><%= book.title %></h2>
+          <p><%= book.author %></p>
+          <p class="synopsis-preview"><%= book.synopsis %></p>
+          <a href="/book-info/<%= ownedBooks.indexOf(book) %>">Read more</a>
+        </li>
+      <%}) %>
+    </ul>
+  <% } else {%>
+    <h1>No posts to show</h1>
+  <% }%>
+
+<%- include("partials/footer.ejs") %>

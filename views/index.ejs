@@ -1,0 +1,15 @@
+
+<%- include("partials/basic-header.ejs") %>
+
+<h1>Welcome to your Library</h1>
+<p>Everyone loves a visit to the library. </p>
+<p>Now you have a library in your hands and the best part is, you own all of the books.</p>
+<p>Keep track of your books, keep track of what you have read, what you want to read next and what needs to be added to the collection.</p>
+<h2>Let's enter the library..</h2>
+
+<form action="/enter-library" method="POST">
+  <input type="submit" name="enter-library" value="Enter your library">
+</form>
+
+
+<%- include("partials/footer.ejs") %>

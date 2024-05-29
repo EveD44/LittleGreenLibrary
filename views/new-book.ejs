@@ -1,0 +1,21 @@
+
+<%- include("partials/header.ejs") %>
+
+<h1>Add a new book</h1>
+  <form action="/submit" method="POST">
+      <input type="text" name="title" id="book-author-input" placeholder="Enter book title">
+      <br /><br />
+      <input type="text" name="author" id="book-author-input" placeholder="Enter author name">
+      <br /><br />
+      <textarea name="synopsis" placeholder="Enter book synopsis"></textarea>
+      <br /><br />
+      <label for="read">Read?</label>
+      <input type="checkbox" id="read" name="read" value="read">
+      <label for="owned">Own?</label>
+      <input type="checkbox" id="owned" name="owned" value="owned">
+      <br /><br />
+      <input type="submit" value="OK">
+  </form>
+
+
+<%- include("partials/footer.ejs") %>

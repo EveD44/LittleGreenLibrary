@@ -1,0 +1,44 @@
+
+<%- include("partials/header.ejs") %>
+
+<h1>To be read</h1>
+
+
+<% if (locals.tbr) { %>
+  <ul>
+    <% tbr.forEach((book)=> {  %>
+      <li>
+        <h2><%= book.title %></h2>
+        <p><%= book.author %></p>
+        <p class="synopsis-preview"><%= book.synopsis %></p>
+        <a href="/book-page/<%= tbr.indexOf(book) %>">Read more</a>
+      </li>
+    <%}) %>
+  </ul>
+<% } else {%>
+  <h1>No posts to show</h1>
+<% }%>
+
+  <form action="/submitTBR" method="POST">
+    <input type="text" name="title" id="book-author-input" placeholder="Enter book title">
+    <br /><br />
+    <input type="text" name="author" id="book-author-input" placeholder="Enter author name">
+    <br /><br />
+    <textarea name="synopsis" placeholder="Enter book synopsis"></textarea>
+    <br /><br />
+    <input type="checkbox" id="breakfast" name="breakfast" value="breakfast">
+    <label for="breakfast">Breakfast</label>
+    <input type="checkbox" id="lunch" name="lunch" value="lunch">
+    <label for="breakfast">Lunch</label>
+    <input type="checkbox" id="dinner" name="dinner" value="dinner">
+    <label for="breakfast">Dinner</label>
+    <input type="checkbox" id="drink" name="drink" value="drink">
+    <label for="breakfast">Drink</label>
+    <input type="checkbox" id="dessert" name="dessert" value="dessert">
+    <label for="breakfast">Dessert</label>
+    <br /><br />
+    <input type="submit" value="OK">
+  </form>
+
+
+<%- include("partials/footer.ejs") %>
